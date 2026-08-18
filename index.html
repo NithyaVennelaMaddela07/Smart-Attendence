@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Smart Attendance System</h1>
+            <p id="date"></p>
+        </header>
+
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="card present-card">
+                <h3>Present</h3>
+                <p id="presentCount">0</p>
+            </div>
+
+            <div class="card absent-card">
+                <h3>Absent</h3>
+                <p id="absentCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Attendance %</h3>
+                <p id="attendancePercentage">0%</p>
+            </div>
+        </section>
+
+        <section class="controls">
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter student name"
+            >
+
+            <button id="addStudentBtn">Add Student</button>
+
+            <input
+                type="text"
+                id="searchStudent"
+                placeholder="Search student..."
+            >
+        </section>
+
+        <section class="attendance-section">
+            <h2>Student Attendance</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Student Name</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable">
+                    <!-- Students will be added here -->
+                </tbody>
+            </table>
+        </section>
+
+        <button class="reset-btn" id="resetBtn">
+            Reset Attendance
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
